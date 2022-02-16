@@ -1,8 +1,20 @@
 .model fsm
+.input RST START pH0 pH1 pH2 pH3 pH4 pH5 pH6 pH7 NEUTRO
+.outputs FINE_OPERAZIONE ERRORE_SENSORE VALVOLA_ACIDO VALVOLA_BASICO STR_DP    
+
 .start_kiss
+.i 4 
+.o 5
+.s 5
+.p 
+.r RST
+
+#tabella transizioni (ingressi, stato presente, stato prossimo, uscita)
+0100000001 - RST ACIDO 00011
+0100000011- RST 00011 
+
 
 .end_kiss
 
-.end
 
-#ciao sono Mattia
+.end
