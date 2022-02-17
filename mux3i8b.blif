@@ -1,4 +1,4 @@
-#multiplexer a 3 ingressi a 8 bit
+#multiplexer 3 ingressi a 8 bit
 
 .model mux3i8b
 
